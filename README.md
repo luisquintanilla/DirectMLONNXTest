@@ -23,7 +23,8 @@ This project adds a few [CustomMapping](https://learn.microsoft.com/dotnet/api/m
 ## Instructions
 
 1. Download the [ResNet50 v2 ONNX model](https://github.com/onnx/models/blob/main/vision/classification/resnet/model/resnet50-v2-7.onnx) and save it in the *DirectMLONNXText* project directory. Make sure to rename the file to *model.onnx* or update the `modelPath` variable in *Program.cs*.
-1. Download the [dog.jpeg image file](https://onnxruntime.ai/images/dog.jpeg) and save it in the *DirectMLONNXText* project directory. 
+1. Download the [dog.jpeg image file](https://onnxruntime.ai/images/dog.jpeg) and save it in the *DirectMLONNXText* project directory.
+1. Update the Device ID in `sessionOptions.AppendExecutionProvider_DML(0)` to your GPUs Device ID (Usually it's 0 or 1).
 1. Use the dotnet CLI or Visual Studio to run your application. If successful, the resulting output should look similar to the following:
 
     ```text
